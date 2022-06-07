@@ -65,14 +65,15 @@ enum ServiceType: CaseIterable {
 extension ServiceType {
     var stringJapanese: String {
         switch self {
-            
+        case .inHomeCareSupportService:
+            return "居宅介護支援事業所"
         }
     }
 
     var fileName: String {
         switch self {
-
-
+        case .inHomeCareSupportService:
+            return "居宅介護支援"
         }
     }
 }

@@ -128,7 +128,7 @@ class SearchViewController: UIViewController {
                 dispatchQueue.async {[weak self] in
                     self?.filitedfacilityInformation =
                     UseCaseSearch.filteredSearchFacilityInformation(
-                        filterServiceType: .all,
+                        filterServiceType: .inHomeCareSupportService,
                         filterSearch: filterSearch,
                         string: searchText
                     )

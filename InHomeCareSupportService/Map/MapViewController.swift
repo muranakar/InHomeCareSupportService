@@ -23,7 +23,7 @@ class MapViewController: UIViewController {
     private var locationManager: CLLocationManager!
     private var prefecture: JapanesePrefecture = .osaka
     private let prefectureRepository = PrefectureRepository()
-    private var filterServiceType: FilterServiceType = .all
+    private var filterServiceType: FilterServiceType = .inHomeCareSupportService
     private let filterServiceTypeRepository = FilterServiceTypeRepository()
     private var facilityInformations: [FacilityInformation] = []
     private var annotationArray: [MKPointAnnotation] = []
@@ -45,7 +45,7 @@ class MapViewController: UIViewController {
         if let loadedFilterServiceType = filterServiceTypeRepository.load() {
             filterServiceType = loadedFilterServiceType
         } else {
-            filterServiceType = .all
+            filterServiceType = .inHomeCareSupportService
         }
         let dispatchQueue = DispatchQueue.global()
         dispatchQueue.async {[weak self] in
@@ -69,7 +69,7 @@ class MapViewController: UIViewController {
         if let loadedFilterServiceType = filterServiceTypeRepository.load() {
             filterServiceType = loadedFilterServiceType
         } else {
-            filterServiceType = .all
+            filterServiceType = .inHomeCareSupportService
         }
 
         if let loadedPrefecture = prefectureRepository.load() {

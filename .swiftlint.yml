@@ -1,5 +1,5 @@
 included:
-  - SeniorCitizensHome/
+  - InHomeCareSupportService/
 opt_in_rules:
   - legacy_random
   - private_action
