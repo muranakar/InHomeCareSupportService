@@ -30,7 +30,9 @@ struct CsvConversion {
                 let revisonString = string.replacingOccurrences(of: "\"", with: "")
                 return revisonString
             }
-            guard array.count == 24 else { return }
+            guard array.count == 24 else {
+                print(array)
+                return }
             csvLineTwoDimensional.append(revisionArray)
         }
 
