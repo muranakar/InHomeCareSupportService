@@ -42,6 +42,7 @@
 		B2B85EFC282D434B0065E12E /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B85EFB282D434B0065E12E /* Setting.storyboard */; };
 		B2B85EFE282D43580065E12E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B85EFD282D43580065E12E /* MapViewController.swift */; };
 		B2B85F00282D43630065E12E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B85EFF282D43630065E12E /* SettingViewController.swift */; };
+		B2BEE933286520150078D46B /* ReviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BEE932286520150078D46B /* ReviewRepository.swift */; };
 		B2C2E8E628411450001A4316 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C2E8E528411450001A4316 /* Search.storyboard */; };
 		B2C2E8E828411466001A4316 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C2E8E728411466001A4316 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		B2B85EFB282D434B0065E12E /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B2B85EFD282D43580065E12E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B2B85EFF282D43630065E12E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B2BEE932286520150078D46B /* ReviewRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewRepository.swift; sourceTree = "<group>"; };
 		B2C2E8E528411450001A4316 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		B2C2E8E728411466001A4316 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C27C0626D0A0DB2AD9A1F410 /* Pods-TrainingAndEmploymentServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingAndEmploymentServices.release.xcconfig"; path = "Target Support Files/Pods-TrainingAndEmploymentServices/Pods-TrainingAndEmploymentServices.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				B2A945E7282C6C5A0001B737 /* FacilityInformation.swift */,
 				B2981493282DD87A00A3D0C3 /* PrefectureRepository.swift */,
 				B28EE17C284C0D3300180139 /* FilterServiceTypeRepository.swift */,
+				B2BEE932286520150078D46B /* ReviewRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				B2981494282DD87A00A3D0C3 /* PrefectureRepository.swift in Sources */,
 				B298148E282DCAB500A3D0C3 /* DecoderFacliityInformation.swift in Sources */,
 				B2381DF7284433D100A9A9C7 /* GoogleAdID.swift in Sources */,
+				B2BEE933286520150078D46B /* ReviewRepository.swift in Sources */,
 				B2B01A462848204E00B820AC /* DetailSearchViewController.swift in Sources */,
 				B2A945D2282C6B810001B737 /* AppDelegate.swift in Sources */,
 				B294DF912833103E00C7C809 /* PasteboardFormatterFacilityInformation.swift in Sources */,
@@ -762,7 +766,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.muranaka.InHomeCareSupportService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -796,7 +800,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.muranaka.InHomeCareSupportService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
