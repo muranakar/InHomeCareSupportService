@@ -32,13 +32,17 @@ class SettingViewController: UIViewController {
         jumpToTwitterInformation()
     }
 
-    @IBAction func shareTwitter(_ sender: Any) {
+    @IBAction private func shareTwitter(_ sender: Any) {
         shareOnTwitter()
     }
 
-    @IBAction func shareLine(_ sender: Any) {
+    @IBAction private func shareLine(_ sender: Any) {
         shareOnLine()
     }
+
+    @IBAction private func shareOtherApp(_ sender: Any) {
+           shareOnOtherApp()
+       }
 
     private func selectRowFilterServiceTypePickerView() {
         guard let loadedFilterServiceType = filterServiceTypeRepository.load() else { return }
@@ -119,6 +123,12 @@ class SettingViewController: UIViewController {
                                                         preferredStyle: UIAlertController.Style.alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default))
                 present(alertController,animated: true,completion: nil)
+            }
+        }
+    private func shareOnOtherApp() {
+            let url = URL(string: "https://sites.google.com/view/muranakar")
+            if UIApplication.shared.canOpenURL(url!) {
+                UIApplication.shared.open(url!)
             }
         }
 }
