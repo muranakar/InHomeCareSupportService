@@ -43,6 +43,13 @@ class SettingViewController: UIViewController {
     @IBAction private func shareOtherApp(_ sender: Any) {
            shareOnOtherApp()
        }
+    @IBAction private func review(_ sender: Any) {
+        let urlString = URL(string: "https://apps.apple.com/app/id1628329901?action=write-review")
+        guard let writeReviewURL = urlString else {
+            fatalError("Expected a valid URL")
+        }
+        UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
+    }
 
     private func selectRowFilterServiceTypePickerView() {
         guard let loadedFilterServiceType = filterServiceTypeRepository.load() else { return }
@@ -76,7 +83,7 @@ class SettingViewController: UIViewController {
             // シェアするテキストを作成
             let text = "全国のケアマネさんの事業所の検索が可能！"
         // swiftlint:disable:next line_length
-            let hashTag = "#居宅 #居宅支援 #ケアマネ #ケアマネさん #介護支援専門員 #介護保険 #医療保険 #在宅 #介護 #医療\nhttps://apps.apple.com/jp/app/%E3%82%B1%E3%82%A2%E3%83%9E%E3%83%8Dmap-%E5%85%A8%E5%9B%BD%E3%81%AE%E5%B1%85%E5%AE%85%E6%94%AF%E6%8F%B4%E4%BA%8B%E6%A5%AD%E6%89%80%E3%82%92%E6%A4%9C%E7%B4%A2%E5%8F%AF%E8%83%BD/id1628329901"
+            let hashTag = "#居宅 #居宅支援 #ケアマネ #ケアマネさん #介護支援専門員 #介護保険 #医療保険 #在宅 #介護 #医療\nhttps://apps.apple.com/jp/app/id1628329901"
             let completedText = text + "\n" + hashTag
 
             // 作成したテキストをエンコード
@@ -92,7 +99,7 @@ class SettingViewController: UIViewController {
         func shareOnLine() {
             let urlscheme: String = "https://line.me/R/share?text="
             // swiftlint:disable:next line_length
-            let message = "全国のケアマネさんの事業所の検索が可能！#居宅 #居宅支援 #ケアマネ #ケアマネさん #介護支援専門員 #介護保険 #医療保険 #在宅 #介護 #医療\nhttps://apps.apple.com/jp/app/%E3%82%B1%E3%82%A2%E3%83%9E%E3%83%8Dmap-%E5%85%A8%E5%9B%BD%E3%81%AE%E5%B1%85%E5%AE%85%E6%94%AF%E6%8F%B4%E4%BA%8B%E6%A5%AD%E6%89%80%E3%82%92%E6%A4%9C%E7%B4%A2%E5%8F%AF%E8%83%BD/id1628329901"
+            let message = "全国のケアマネさんの事業所の検索が可能！#居宅 #居宅支援 #ケアマネ #ケアマネさん #介護支援専門員 #介護保険 #医療保険 #在宅 #介護 #医療\nhttps://apps.apple.com/jp/app/id1628329901"
 
             // line:/msg/text/(メッセージ)
             let urlstring = urlscheme + "/" + message

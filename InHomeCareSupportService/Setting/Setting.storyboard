@@ -32,7 +32,7 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="SHS-K1-nIt"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-Vi-LaZ" customClass="FunctionSelectionItemButton" customModule="InHomeCareSupportService" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-Vi-LaZ" customClass="FunctionSelectionItemButton" customModule="InHomeCareSupportService">
                                 <rect key="frame" x="132" y="324.5" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="NuH-37-Y4y"/>
@@ -44,7 +44,7 @@
                                     <action selector="configureCoreLocation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aLd-Tg-lzr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW0-ke-dZT" customClass="FunctionSelectionItemButton" customModule="InHomeCareSupportService" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW0-ke-dZT" customClass="FunctionSelectionItemButton" customModule="InHomeCareSupportService">
                                 <rect key="frame" x="137" y="394.5" width="140" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="FWv-x0-LDa"/>
@@ -67,24 +67,31 @@
                                 <rect key="frame" x="0.0" y="653" width="414" height="80"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="UTs-SJ-gR6">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="rm9-FJ-223" appends="YES" id="Ixd-mN-YOY"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LINE_Brand_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FRg-sk-7rw">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="80"/>
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="BQ5-eX-M7Y" appends="YES" id="BX6-ZT-G7z"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="otherApp" translatesAutoresizingMaskIntoConstraints="NO" id="k9k-B6-pu4">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="80"/>
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="47m-zK-nEa" appends="YES" id="dHS-Sd-Dab"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="review" translatesAutoresizingMaskIntoConstraints="NO" id="WtN-Jq-F4w">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="80"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="BkI-5Z-iSc" appends="YES" id="SJl-nk-GKZ"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -137,6 +144,11 @@
                         <action selector="shareOtherApp:" destination="Y6W-OH-hqX" id="vWr-vg-aQu"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="BkI-5Z-iSc">
+                    <connections>
+                        <action selector="review:" destination="Y6W-OH-hqX" id="bpw-ZF-KRk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="91.741071428571431"/>
         </scene>
@@ -153,6 +165,7 @@
         <image name="LINE_Brand_icon" width="1001" height="1000"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="otherApp" width="1080" height="1080"/>
+        <image name="review" width="1080" height="1080"/>
         <image name="twitter" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
